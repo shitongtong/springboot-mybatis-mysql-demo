@@ -14,8 +14,19 @@ spring:
       -  classpath:/templates/
     charset: UTF-8
     requestContextAttribute: rc
+    #禁用缓存
+    cache: false
+    settings:
+      template_update_delay: 0
   profiles:
     active: ${spring.profiles.active}
+  #热部署配置
+  devtools:
+    restart:
+      #自动重启
+      enabled: true
+    livereload:
+      enabled: true
 
 
 mybatis:
